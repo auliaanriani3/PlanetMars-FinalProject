@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    bool clickStart;
+    bool clickEnd;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,21 +22,39 @@ public class SceneController : MonoBehaviour
 
     public void MoveScene()
     {
-        if (Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, float.PositiveInfinity))
             {
-                Debug.Log("Test_Lagi");
                 if (hit.collider.tag == "Planet")
                 {
-                    Debug.Log("Test");
-                    SceneManager.LoadScene(1);
-                    
-
+                    clickStart = true;
                 }
             }
-
+            else
+            {
+                clickStart = false;
+            }
+        }
+        else if (Input.GetMouseButton(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out RaycastHit hit, float.PositiveInfinity))
+            {
+                if (hit.collider.tag == "Planet" && clickStart)
+                {
+                    clickEnd = true;  
+                }
+            }
+            else
+            {
+                clickEnd = false;
+            }
+        }
+        else if(Input.GetMouseButtonUp(0) && clickEnd)
+        {
+            SceneManager.LoadScene(1);
         }
     }
 

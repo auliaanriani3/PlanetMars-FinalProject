@@ -2308,7 +2308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.087344356, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 23.677631, y: -0.00015006818}
+  m_AnchoredPosition: {x: -53.166164, y: -0.00015006818}
   m_SizeDelta: {x: -23.6776, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &536645629
@@ -3209,8 +3209,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 831522285}
   m_HandleRect: {fileID: 831522284}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3702,7 +3702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!95 &853374566
 Animator:
-  serializedVersion: 5
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3715,12 +3715,10 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &868363820
 GameObject:
   m_ObjectHideFlags: 0
@@ -3779,7 +3777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!95 &868363823
 Animator:
-  serializedVersion: 5
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3792,12 +3790,10 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &868363824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3848,6 +3844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaa689eef38b6449a49d884c64581a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slideDuration: 0.5
   hide: 0
   panel: {fileID: 868363821}
   DefPos: {x: 0, y: 0}
@@ -4898,7 +4895,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2139118509}
   m_HandleRect: {fileID: 2139118508}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 1.0000001
   m_Size: 0.31901693
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -7748,7 +7745,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -3.43}
 --- !u!4 &543450652339185331
 Transform:
@@ -7762,7 +7759,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 51.343, y: 66.6, z: 270}
 --- !u!1 &919132147819852961
 GameObject:
@@ -7814,7 +7811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1711813854276509148
 MeshRenderer:
   m_ObjectHideFlags: 0
