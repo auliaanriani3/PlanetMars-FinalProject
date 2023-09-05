@@ -9,7 +9,9 @@ public class CharController : MonoBehaviour
     Vector3 moveDestination;
     public float speed;
     public bool isClick;
-
+    public GameObject[] items;
+    public GameObject[] itemInfos;
+    public float distanceToShowInfo;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,18 @@ public class CharController : MonoBehaviour
 
             }
         }
+
+        for (int i = 0; i < items.Length; i++) 
+        {
+            if(Vector3.Distance(transform.position, items[i].transform.position) <= distanceToShowInfo)
+            {
+                itemInfos[i].SetActive(true);
+            }
+            else
+            {
+                itemInfos[i].SetActive(false);
+            }
+        }
     }
 
     public void ClickOn()
@@ -46,23 +60,5 @@ public class CharController : MonoBehaviour
     public void ClickOff()
     {
         isClick = false;
-    }
-    void ObjectToMouse()
-    {
-        transform.position = Vector3.Lerp(transform.position, moveDestination, speed * Time.deltaTime);
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit, float.PositiveInfinity))
-            {
-                if (hit.collider.tag == "Ground")
-                {
-                    Debug.Log(hit.point);
-                    moveDestination = new Vector3(hit.point.x, hit.point.y + 1, hit.point.z);
-
-                }
-            }
-            
-        }
     }
 }
