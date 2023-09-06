@@ -12,6 +12,7 @@ public class CharController : MonoBehaviour
     public GameObject[] items;
     public GameObject[] itemInfos;
     public float distanceToShowInfo;
+    public GameObject[] sign;
 
     // Start is called before the first frame update
     void Start()
@@ -44,10 +45,12 @@ public class CharController : MonoBehaviour
             if(Vector3.Distance(transform.position, items[i].transform.position) <= distanceToShowInfo)
             {
                 itemInfos[i].SetActive(true);
+                sign[i].SetActive(false);
             }
             else
             {
                 itemInfos[i].SetActive(false);
+                sign[i].SetActive(true);
             }
         }
     }

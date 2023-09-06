@@ -926,13 +926,13 @@
       <Project>{B7121421-6BB2-DE04-3930-7CF5698F9B64}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{01EC14AD-BA35-A070-E4B9-91BC7773C0E8}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{33D7BADC-3869-137D-EB55-10A42A6DDFAD}</Project>
       <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{01EC14AD-BA35-A070-E4B9-91BC7773C0E8}</Project>
+      <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
       <Project>{8BC57DCD-C8C3-57D7-02B3-A981FD316EB0}</Project>
